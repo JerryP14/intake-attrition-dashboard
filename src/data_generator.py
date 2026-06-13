@@ -34,7 +34,7 @@ def generate_simulated_data(n_records: int = 300) -> pd.DataFrame:
     ]
     
     intake_dates = [
-        datetime.now() - timedelta(days=x)
+        datetime.now() - timedelta(days=int(x))
         for x in np.random.randint(1, 180, n_records)
     ]
     

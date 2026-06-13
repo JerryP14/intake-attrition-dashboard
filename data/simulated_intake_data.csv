@@ -1,0 +1,401 @@
+client_id,intake_date,referral_source,transportation_barrier,housing_instability,employment_status,family_support,missed_appointments,contact_attempts,wait_days,intake_completed,admitted
+CLIENT_5FECEB66,2026-03-02 14:42:43.816123,Court System,False,False,Student,True,0,0,19,True,True
+CLIENT_6B86B273,2026-03-12 14:42:43.816138,Social Services,False,False,Unemployed,True,0,1,8,True,True
+CLIENT_D4735E3A,2026-05-29 14:42:43.816140,Family/Friend,False,False,Unemployed,False,2,4,16,True,False
+CLIENT_4E074085,2026-02-26 14:42:43.816142,Court System,False,False,Student,True,1,3,26,False,True
+CLIENT_4B227777,2026-04-02 14:42:43.816143,Social Services,False,True,Unemployed,True,3,4,16,True,False
+CLIENT_EF2D127D,2026-05-23 14:42:43.816145,Community Agency,False,True,Student,False,1,3,11,True,True
+CLIENT_E7F6C011,2026-03-02 14:42:43.816146,Court System,False,False,Student,True,1,4,6,True,True
+CLIENT_7902699B,2026-02-11 14:42:43.816147,Family/Friend,False,True,Unemployed,False,0,2,26,True,False
+CLIENT_2C624232,2026-03-30 14:42:43.816149,Healthcare Provider,False,False,Unemployed,False,0,1,2,True,True
+CLIENT_19581E27,2026-03-17 14:42:43.816150,Court System,False,False,Employed,False,2,3,9,True,True
+CLIENT_4A44DC15,2026-02-16 14:42:43.816152,Healthcare Provider,False,False,Student,True,0,0,1,True,False
+CLIENT_4FC82B26,2026-03-05 14:42:43.816153,Social Services,False,False,Employed,True,1,1,24,True,True
+CLIENT_6B51D431,2026-03-01 14:42:43.816154,Community Agency,True,False,Unemployed,True,0,0,2,True,False
+CLIENT_3FDBA35F,2026-01-12 14:42:43.816156,Self Referral,False,False,Employed,False,2,1,15,True,True
+CLIENT_8527A891,2026-02-02 14:42:43.816157,Community Agency,False,False,Student,True,0,1,1,True,True
+CLIENT_E629FA65,2026-01-14 14:42:43.816158,Court System,False,False,Employed,True,1,4,27,True,False
+CLIENT_B17EF6D1,2026-04-21 14:42:43.816159,Healthcare Provider,False,True,Student,False,2,3,23,True,True
+CLIENT_4523540F,2026-06-11 14:42:43.816161,Healthcare Provider,True,False,Unemployed,True,0,3,9,True,True
+CLIENT_4EC9599F,2026-03-17 14:42:43.816162,Family/Friend,False,True,Unemployed,True,1,6,5,False,True
+CLIENT_9400F1B2,2026-01-06 14:42:43.816163,Healthcare Provider,False,False,Student,True,0,1,21,False,True
+CLIENT_F5CA38F7,2026-05-06 14:42:43.816164,Family/Friend,False,True,Unemployed,False,1,2,25,False,True
+CLIENT_6F4B6612,2026-02-03 14:42:43.816166,Social Services,False,False,Unemployed,True,0,2,10,True,True
+CLIENT_785F3EC7,2026-05-23 14:42:43.816167,Self Referral,False,False,Unemployed,False,2,0,22,True,False
+CLIENT_535FA30D,2026-01-03 14:42:43.816168,Court System,False,False,Unemployed,False,0,0,6,True,True
+CLIENT_C2356069,2026-04-16 14:42:43.816169,Family/Friend,True,True,Student,True,1,4,26,True,False
+CLIENT_B7A56873,2026-05-22 14:42:43.816171,Self Referral,True,False,Employed,False,0,1,28,True,False
+CLIENT_5F9C4AB0,2026-03-16 14:42:43.816172,Healthcare Provider,False,False,Employed,True,3,0,14,False,False
+CLIENT_670671CD,2026-04-25 14:42:43.816173,Healthcare Provider,True,False,Unemployed,True,2,0,5,False,True
+CLIENT_59E19706,2026-04-15 14:42:43.816175,Self Referral,True,False,Employed,False,1,5,19,True,False
+CLIENT_35135AAA,2025-12-25 14:42:43.816176,Healthcare Provider,False,False,Employed,False,0,1,26,True,False
+CLIENT_624B60C5,2026-05-29 14:42:43.816177,Social Services,True,False,Unemployed,False,1,7,8,True,True
+CLIENT_EB1E33E8,2025-12-20 14:42:43.816179,Social Services,False,False,Unemployed,True,0,4,21,False,True
+CLIENT_E29C9C18,2026-04-23 14:42:43.816180,Self Referral,False,False,Employed,True,3,0,19,False,True
+CLIENT_C6F3AC57,2026-02-25 14:42:43.816181,Family/Friend,False,True,Student,True,1,4,11,True,False
+CLIENT_86E50149,2026-04-19 14:42:43.816182,Family/Friend,False,True,Unemployed,True,0,3,18,True,False
+CLIENT_9F14025A,2026-04-10 14:42:43.816184,Self Referral,False,True,Student,True,0,4,19,False,True
+CLIENT_76A50887,2026-02-02 14:42:43.816185,Family/Friend,True,False,Employed,True,1,7,2,True,False
+CLIENT_7A61B537,2026-04-23 14:42:43.816186,Family/Friend,False,True,Unemployed,True,1,2,14,True,True
+CLIENT_AEA92132,2026-01-29 14:42:43.816187,Social Services,False,True,Student,True,1,7,1,False,False
+CLIENT_0B918943,2026-05-23 14:42:43.816188,Family/Friend,False,False,Unemployed,True,1,2,29,True,False
+CLIENT_D59ECED1,2026-04-01 14:42:43.816190,Community Agency,False,False,Employed,True,0,4,20,True,False
+CLIENT_3D914F93,2025-12-28 14:42:43.816191,Court System,False,False,Student,False,0,2,1,True,False
+CLIENT_73475CB4,2026-05-26 14:42:43.816192,Healthcare Provider,False,False,Employed,True,0,3,21,True,False
+CLIENT_44CB730C,2026-02-01 14:42:43.816193,Community Agency,True,False,Employed,False,1,1,2,False,False
+CLIENT_71EE45A3,2026-03-16 14:42:43.816195,Family/Friend,False,False,Unemployed,False,0,2,5,True,True
+CLIENT_811786AD,2026-04-14 14:42:43.816196,Social Services,True,True,Student,True,1,2,14,False,True
+CLIENT_25FC0E70,2026-05-30 14:42:43.816197,Self Referral,True,False,Employed,False,2,4,26,True,True
+CLIENT_31489056,2026-06-04 14:42:43.816198,Family/Friend,True,False,Employed,False,1,3,9,True,False
+CLIENT_98010BD9,2026-03-15 14:42:43.816199,Social Services,False,False,Student,False,1,6,8,True,False
+CLIENT_0E17DACA,2026-04-21 14:42:43.816201,Court System,False,False,Employed,True,1,6,0,True,False
+CLIENT_1A656259,2026-02-03 14:42:43.816202,Family/Friend,False,False,Employed,True,1,6,15,True,False
+CLIENT_031B4AF5,2026-03-21 14:42:43.816203,Self Referral,False,False,Student,True,0,6,5,True,False
+CLIENT_41CFC0D1,2026-03-13 14:42:43.816204,Social Services,True,False,Student,True,0,1,8,True,False
+CLIENT_2858DCD1,2026-02-22 14:42:43.816209,Social Services,True,False,Student,False,2,7,26,True,True
+CLIENT_2FCA346D,2025-12-23 14:42:43.816210,Social Services,True,False,Student,False,3,4,3,True,True
+CLIENT_02D20BBD,2026-06-05 14:42:43.816211,Court System,True,False,Unemployed,True,1,4,26,True,True
+CLIENT_7688B6EF,2025-12-20 14:42:43.816212,Family/Friend,False,True,Student,False,2,5,27,True,True
+CLIENT_C837649C,2026-05-09 14:42:43.816214,Court System,False,False,Unemployed,True,1,3,1,True,True
+CLIENT_6208EF0F,2026-03-24 14:42:43.816215,Healthcare Provider,False,True,Unemployed,True,3,6,28,True,False
+CLIENT_3E1E967E,2025-12-31 14:42:43.816216,Healthcare Provider,True,False,Unemployed,False,1,1,3,True,False
+CLIENT_39FA9EC1,2026-04-24 14:42:43.816217,Family/Friend,False,False,Employed,True,0,3,0,True,True
+CLIENT_D029FA3A,2026-03-01 14:42:43.816219,Court System,True,False,Unemployed,True,1,6,18,True,False
+CLIENT_81B8A03F,2026-02-01 14:42:43.816220,Self Referral,False,False,Unemployed,True,2,1,25,False,False
+CLIENT_DA4EA2A5,2026-06-11 14:42:43.816221,Social Services,True,False,Employed,True,0,3,24,True,True
+CLIENT_A68B412C,2026-01-30 14:42:43.816222,Social Services,False,True,Employed,False,1,4,9,True,True
+CLIENT_108C995B,2026-04-20 14:42:43.816224,Family/Friend,False,False,Employed,False,4,4,20,True,True
+CLIENT_3ADA92F2,2026-02-27 14:42:43.816225,Healthcare Provider,False,True,Student,False,0,7,14,True,False
+CLIENT_49D180EC,2026-06-09 14:42:43.816226,Healthcare Provider,False,True,Employed,False,3,0,26,True,False
+CLIENT_A21855DA,2026-04-20 14:42:43.816228,Social Services,True,False,Employed,True,0,7,21,True,True
+CLIENT_C75CB66A,2026-01-18 14:42:43.816229,Family/Friend,False,False,Unemployed,True,0,2,18,True,False
+CLIENT_FF5A1AE0,2026-04-30 14:42:43.816230,Court System,False,False,Employed,False,1,7,15,False,False
+CLIENT_7F2253D7,2026-01-02 14:42:43.816231,Healthcare Provider,False,True,Student,True,2,6,20,True,False
+CLIENT_87226162,2026-05-30 14:42:43.816233,Court System,True,False,Employed,False,1,5,26,True,False
+CLIENT_96061E92,2026-03-10 14:42:43.816234,Healthcare Provider,True,False,Student,False,2,3,23,True,True
+CLIENT_EB624DBE,2026-04-26 14:42:43.816235,Healthcare Provider,True,False,Employed,True,1,5,21,True,True
+CLIENT_F369CB89,2026-05-29 14:42:43.816236,Community Agency,False,False,Employed,False,0,0,3,True,False
+CLIENT_F74EFABE,2026-05-04 14:42:43.816237,Healthcare Provider,False,False,Employed,False,1,2,1,True,True
+CLIENT_A88A7902,2026-03-23 14:42:43.816240,Self Referral,False,False,Employed,False,0,3,29,True,True
+CLIENT_349C4120,2026-02-22 14:42:43.816241,Family/Friend,True,False,Student,True,0,1,24,False,True
+CLIENT_98A3AB7C,2026-04-21 14:42:43.816242,Family/Friend,False,False,Student,True,1,6,12,True,True
+CLIENT_48449A14,2026-05-20 14:42:43.816243,Court System,False,False,Unemployed,True,2,2,27,False,True
+CLIENT_5316CA1C,2026-01-10 14:42:43.816244,Healthcare Provider,False,False,Student,True,0,4,0,True,True
+CLIENT_A46E3763,2026-02-09 14:42:43.816246,Self Referral,True,False,Employed,True,0,0,16,True,False
+CLIENT_BBB965AB,2026-05-03 14:42:43.816247,Court System,False,False,Unemployed,False,1,2,12,True,True
+CLIENT_44C8031C,2026-01-07 14:42:43.816248,Community Agency,True,False,Unemployed,True,0,6,3,False,False
+CLIENT_B4944C6F,2026-05-29 14:42:43.816249,Court System,False,False,Unemployed,False,0,7,6,True,False
+CLIENT_434C9B5A,2026-04-29 14:42:43.816250,Court System,False,False,Employed,False,1,2,16,True,False
+CLIENT_BDD2D3AF,2026-04-09 14:42:43.816252,Healthcare Provider,True,False,Student,False,2,7,8,True,True
+CLIENT_8B940BE7,2026-03-16 14:42:43.816253,Community Agency,False,False,Employed,True,1,6,3,True,False
+CLIENT_CD70BEA0,2026-04-03 14:42:43.816254,Court System,True,False,Unemployed,False,3,4,18,True,False
+CLIENT_69F59C27,2026-06-04 14:42:43.816255,Self Referral,True,False,Employed,True,0,3,0,True,True
+CLIENT_1DA51B8D,2026-03-17 14:42:43.816256,Self Referral,False,False,Employed,True,1,1,9,True,True
+CLIENT_82416496,2026-02-04 14:42:43.816258,Family/Friend,False,False,Student,False,0,4,3,True,True
+CLIENT_6E400187,2026-01-28 14:42:43.816262,Community Agency,False,False,Student,True,1,7,8,True,False
+CLIENT_E3D6C4D4,2026-04-11 14:42:43.816263,Community Agency,False,True,Unemployed,True,1,7,12,True,False
+CLIENT_AD48FF99,2026-01-25 14:42:43.816264,Family/Friend,False,True,Employed,False,1,1,13,True,False
+CLIENT_7B1A278F,2026-03-24 14:42:43.816265,Court System,False,False,Employed,True,1,3,9,False,True
+CLIENT_D6D824AB,2026-01-28 14:42:43.816267,Community Agency,False,False,Student,True,1,2,5,True,False
+CLIENT_29DB0C67,2026-01-01 14:42:43.816268,Self Referral,False,True,Employed,True,4,1,15,True,True
+CLIENT_8C1F1046,2026-01-01 14:42:43.816269,Self Referral,False,True,Employed,False,2,0,5,True,True
+CLIENT_AD573668,2026-05-11 14:42:43.816270,Healthcare Provider,False,True,Employed,False,1,0,16,True,True
+CLIENT_16DC368A,2026-02-10 14:42:43.816272,Community Agency,True,True,Student,True,1,6,9,True,True
+CLIENT_37834F2F,2026-06-08 14:42:43.816273,Court System,False,True,Unemployed,True,0,4,17,False,True
+CLIENT_454F63AC,2026-05-03 14:42:43.816274,Family/Friend,False,False,Unemployed,True,0,7,26,True,True
+CLIENT_5EF6FDF3,2026-05-16 14:42:43.816275,Family/Friend,True,False,Employed,True,0,3,21,True,True
+CLIENT_1253E937,2026-01-29 14:42:43.816277,Court System,False,True,Unemployed,False,0,6,17,True,False
+CLIENT_482D9673,2026-04-02 14:42:43.816278,Social Services,True,False,Student,True,0,4,2,True,False
+CLIENT_3346F2BB,2026-06-01 14:42:43.816279,Healthcare Provider,False,True,Student,True,1,4,19,True,False
+CLIENT_9537F32E,2026-01-02 14:42:43.816280,Family/Friend,True,False,Unemployed,False,1,6,26,False,False
+CLIENT_0FD42B3F,2026-05-11 14:42:43.816282,Community Agency,True,False,Unemployed,False,0,5,20,True,True
+CLIENT_9BDB2AF6,2026-04-26 14:42:43.816283,Healthcare Provider,False,False,Employed,False,2,4,24,True,True
+CLIENT_F6E0A1E2,2026-01-13 14:42:43.816284,Community Agency,False,True,Unemployed,True,2,5,27,True,True
+CLIENT_B1556DEA,2026-04-12 14:42:43.816286,Self Referral,False,False,Employed,True,0,0,14,True,True
+CLIENT_6C658EE8,2026-05-07 14:42:43.816287,Healthcare Provider,True,True,Employed,True,2,0,14,True,False
+CLIENT_9F1F9DCE,2026-03-06 14:42:43.816288,Family/Friend,False,False,Student,True,1,4,3,True,True
+CLIENT_28DAE7C8,2025-12-23 14:42:43.816289,Healthcare Provider,True,False,Student,False,1,0,28,True,False
+CLIENT_E5B861A6,2026-03-01 14:42:43.816291,Healthcare Provider,False,False,Student,False,2,3,26,True,False
+CLIENT_2AC878B0,2026-05-09 14:42:43.816292,Healthcare Provider,True,True,Student,False,0,5,8,True,False
+CLIENT_85DAAF6F,2026-03-04 14:42:43.816293,Social Services,True,False,Unemployed,False,0,5,26,False,False
+CLIENT_3038BFB5,2025-12-20 14:42:43.816294,Healthcare Provider,False,True,Student,True,1,4,25,True,True
+CLIENT_2ABACA49,2026-02-02 14:42:43.816295,Community Agency,False,True,Unemployed,False,1,0,18,True,False
+CLIENT_89AA1E58,2026-06-12 14:42:43.816297,Self Referral,False,False,Student,True,1,1,23,True,True
+CLIENT_1BE00341,2026-06-08 14:42:43.816298,Court System,False,True,Unemployed,True,1,7,27,True,False
+CLIENT_A665A459,2026-01-22 14:42:43.816299,Healthcare Provider,False,False,Employed,True,1,6,16,True,True
+CLIENT_6AFFDAE3,2026-03-02 14:42:43.816300,Family/Friend,True,False,Unemployed,True,2,6,10,True,True
+CLIENT_0F8EF337,2026-05-17 14:42:43.816302,Healthcare Provider,False,True,Unemployed,True,0,5,24,True,True
+CLIENT_65A69990,2026-01-27 14:42:43.816303,Family/Friend,False,False,Student,False,0,4,8,True,False
+CLIENT_922C7954,2026-05-29 14:42:43.816304,Community Agency,False,False,Unemployed,True,0,4,9,True,False
+CLIENT_2747B7C7,2026-03-15 14:42:43.816305,Family/Friend,False,False,Employed,True,2,3,17,True,False
+CLIENT_6566230E,2026-05-02 14:42:43.816307,Court System,False,False,Employed,True,2,2,19,False,True
+CLIENT_38D66D96,2026-02-09 14:42:43.816308,Self Referral,False,False,Student,False,0,7,12,True,True
+CLIENT_EECA91FD,2025-12-16 14:42:43.816310,Family/Friend,False,False,Employed,False,2,2,7,True,True
+CLIENT_DBB1DED6,2026-04-11 14:42:43.816311,Family/Friend,False,False,Unemployed,False,0,5,6,True,False
+CLIENT_D2F48367,2026-03-09 14:42:43.816312,Self Referral,True,True,Employed,True,2,6,16,True,True
+CLIENT_5D389F5E,2026-04-22 14:42:43.816313,Court System,False,False,Student,False,1,3,20,True,True
+CLIENT_13671077,2026-03-09 14:42:43.816314,Healthcare Provider,False,False,Unemployed,True,0,3,22,False,True
+CLIENT_36EBE205,2026-02-01 14:42:43.816316,Family/Friend,True,True,Student,False,0,3,14,False,True
+CLIENT_D80EAE6E,2026-01-13 14:42:43.816317,Self Referral,False,False,Unemployed,False,2,5,19,True,False
+CLIENT_D6A40317,2026-01-21 14:42:43.816320,Community Agency,False,True,Employed,True,1,2,14,False,True
+CLIENT_8D27BA37,2025-12-24 14:42:43.816321,Self Referral,False,True,Student,True,1,6,0,False,False
+CLIENT_DBAE772D,2026-05-15 14:42:43.816322,Community Agency,False,False,Student,True,1,3,24,False,False
+CLIENT_2C7D5490,2026-05-08 14:42:43.816324,Court System,True,True,Unemployed,True,1,6,13,False,True
+CLIENT_D4EE9F58,2026-05-31 14:42:43.816325,Healthcare Provider,False,False,Student,True,2,0,4,True,True
+CLIENT_D6F0C71E,2026-01-04 14:42:43.816326,Self Referral,False,False,Unemployed,False,2,4,10,True,False
+CLIENT_5EC1A0C9,2026-04-03 14:42:43.816327,Social Services,True,False,Unemployed,True,1,4,15,True,True
+CLIENT_BE47ADDB,2026-03-19 14:42:43.816328,Family/Friend,False,False,Unemployed,True,0,6,1,True,True
+CLIENT_0A5B046D,2026-05-16 14:42:43.816330,Court System,False,True,Unemployed,True,1,1,7,False,False
+CLIENT_1D28C120,2026-04-08 14:42:43.816331,Self Referral,False,False,Employed,True,0,1,10,True,False
+CLIENT_EC2E990B,2025-12-25 14:42:43.816332,Family/Friend,False,False,Unemployed,False,1,5,28,True,False
+CLIENT_05ADA863,2026-04-29 14:42:43.816333,Self Referral,False,False,Student,True,3,5,17,False,False
+CLIENT_9AE2BDD7,2026-04-12 14:42:43.816335,Community Agency,True,True,Employed,False,0,4,2,False,True
+CLIENT_8E612BD1,2026-01-30 14:42:43.816336,Self Referral,False,False,Student,False,1,0,29,False,True
+CLIENT_043066DA,2026-05-16 14:42:43.816337,Social Services,True,False,Employed,False,2,7,25,True,True
+CLIENT_620C9C33,2026-05-16 14:42:43.816338,Self Referral,True,False,Unemployed,False,1,2,0,True,True
+CLIENT_1D0EBEA5,2026-02-25 14:42:43.816339,Self Referral,True,False,Employed,True,2,2,10,True,False
+CLIENT_210E3B16,2026-04-30 14:42:43.816341,Social Services,True,False,Employed,False,1,5,15,True,True
+CLIENT_0FECF924,2026-03-21 14:42:43.816342,Court System,False,False,Student,True,4,0,17,True,True
+CLIENT_C75DE23D,2026-05-14 14:42:43.816343,Self Referral,False,False,Student,True,2,5,29,True,True
+CLIENT_7ED8F0F3,2026-03-30 14:42:43.816345,Social Services,False,True,Unemployed,False,1,7,15,True,True
+CLIENT_FF2CCB6B,2026-02-05 14:42:43.816346,Family/Friend,True,False,Employed,False,2,2,22,True,True
+CLIENT_A512DB27,2026-03-13 14:42:43.816347,Community Agency,False,False,Employed,False,0,6,9,True,False
+CLIENT_BB668CA9,2026-02-04 14:42:43.816348,Community Agency,False,False,Employed,True,1,5,17,True,False
+CLIENT_79D6EAA2,2026-02-12 14:42:43.816349,Self Referral,False,False,Unemployed,True,1,3,5,True,False
+CLIENT_3D3286F7,2026-05-17 14:42:43.816351,Court System,False,True,Unemployed,False,0,6,18,True,False
+CLIENT_3F9807CB,2026-02-12 14:42:43.816352,Court System,False,False,Unemployed,True,1,7,3,True,True
+CLIENT_BC52DD63,2026-02-17 14:42:43.816353,Family/Friend,True,True,Unemployed,False,3,7,26,True,True
+CLIENT_E0F05DA9,2026-06-10 14:42:43.816355,Self Referral,False,False,Unemployed,False,1,5,12,True,True
+CLIENT_73D3F1BA,2026-03-02 14:42:43.816356,Community Agency,False,True,Student,True,0,4,23,True,True
+CLIENT_80C3CD40,2026-01-09 14:42:43.816357,Court System,False,False,Employed,True,0,5,13,False,True
+CLIENT_F57E5CB1,2026-01-27 14:42:43.816358,Self Referral,True,False,Employed,True,0,4,2,True,True
+CLIENT_734D0759,2026-04-12 14:42:43.816360,Court System,False,False,Employed,True,2,7,9,True,False
+CLIENT_284DE502,2025-12-30 14:42:43.816361,Social Services,False,True,Employed,False,4,0,5,True,True
+CLIENT_68519A9E,2026-04-23 14:42:43.816362,Court System,False,True,Employed,True,1,7,0,False,True
+CLIENT_4A8596A7,2025-12-23 14:42:43.816364,Community Agency,False,True,Employed,False,1,2,22,True,True
+CLIENT_41E521AD,2026-01-12 14:42:43.816365,Healthcare Provider,False,False,Employed,True,1,6,23,True,False
+CLIENT_DAC53C17,2026-04-15 14:42:43.816366,Family/Friend,True,True,Employed,False,2,6,26,False,False
+CLIENT_CBA28B89,2026-02-15 14:42:43.816367,Family/Friend,True,False,Student,True,1,1,13,True,False
+CLIENT_8CD25102,2026-01-04 14:42:43.816369,Community Agency,False,False,Employed,True,1,1,7,True,True
+CLIENT_01D54579,2026-03-09 14:42:43.816370,Court System,False,True,Student,True,2,7,18,True,False
+CLIENT_3068430D,2026-02-20 14:42:43.816371,Self Referral,True,False,Unemployed,False,0,2,13,True,False
+CLIENT_7B697596,2026-04-12 14:42:43.816372,Court System,False,False,Employed,False,1,1,9,True,False
+CLIENT_580811FA,2026-04-22 14:42:43.816374,Community Agency,False,True,Unemployed,False,2,6,16,True,False
+CLIENT_BFA76346,2026-06-01 14:42:43.816375,Family/Friend,False,False,Unemployed,True,1,5,8,False,False
+CLIENT_B8AED072,2026-05-05 14:42:43.816376,Court System,False,False,Unemployed,True,1,0,28,False,False
+CLIENT_52F11620,2026-02-03 14:42:43.816377,Family/Friend,False,False,Student,True,1,0,5,True,True
+CLIENT_61A229BA,2026-02-02 14:42:43.816379,Self Referral,False,False,Unemployed,True,1,2,10,True,True
+CLIENT_2811745D,2026-02-20 14:42:43.816380,Family/Friend,False,False,Unemployed,True,1,7,24,True,True
+CLIENT_38B2D03F,2026-03-04 14:42:43.816381,Family/Friend,False,False,Unemployed,False,2,1,6,False,True
+CLIENT_D6061BBE,2026-02-20 14:42:43.816382,Healthcare Provider,False,False,Employed,False,1,5,16,False,True
+CLIENT_7045D16A,2026-03-24 14:42:43.816383,Healthcare Provider,False,False,Employed,False,0,0,27,True,True
+CLIENT_2397346B,2026-02-20 14:42:43.816385,Social Services,False,False,Student,False,1,0,27,False,True
+CLIENT_70260742,2026-06-11 14:42:43.816386,Healthcare Provider,False,False,Student,True,1,3,0,True,True
+CLIENT_EB3BE230,2026-02-03 14:42:43.816387,Family/Friend,True,True,Employed,True,3,7,21,True,False
+CLIENT_684FE39F,2026-04-20 14:42:43.816388,Community Agency,True,True,Student,True,1,3,4,True,False
+CLIENT_7559CA4A,2026-03-18 14:42:43.816390,Family/Friend,False,True,Employed,False,0,6,8,True,False
+CLIENT_1DFACB2E,2026-02-04 14:42:43.816391,Community Agency,False,False,Unemployed,True,1,0,17,True,True
+CLIENT_B4BBE448,2026-01-17 14:42:43.816392,Community Agency,True,True,Unemployed,True,2,2,23,True,True
+CLIENT_8BCBB4C1,2026-02-07 14:42:43.816393,Healthcare Provider,False,False,Student,True,0,4,26,True,True
+CLIENT_A4E00D7E,2026-02-03 14:42:43.816395,Court System,False,True,Employed,True,0,4,20,False,True
+CLIENT_5A39CADD,2026-04-21 14:42:43.816396,Self Referral,True,False,Employed,False,2,5,1,True,True
+CLIENT_27BADC98,2025-12-23 14:42:43.816397,Healthcare Provider,False,True,Student,False,0,0,28,True,False
+CLIENT_43974ED7,2026-01-04 14:42:43.816398,Healthcare Provider,False,False,Employed,True,0,0,25,True,False
+CLIENT_C17EDAAE,2026-01-04 14:42:43.816400,Court System,False,False,Unemployed,False,1,6,10,True,True
+CLIENT_4621C1D5,2026-04-06 14:42:43.816401,Self Referral,False,False,Student,False,1,0,26,True,False
+CLIENT_FC56DBC6,2026-02-10 14:42:43.816402,Family/Friend,False,False,Student,True,1,2,27,True,True
+CLIENT_F8809AFF,2026-01-19 14:42:43.816403,Social Services,False,True,Employed,True,2,3,5,True,True
+CLIENT_5CF4E26B,2026-05-06 14:42:43.816405,Social Services,False,False,Student,True,0,0,25,True,False
+CLIENT_968076BE,2026-05-20 14:42:43.816406,Family/Friend,False,True,Employed,True,1,0,7,True,True
+CLIENT_8DF66F64,2026-04-05 14:42:43.816407,Healthcare Provider,True,False,Employed,False,0,6,3,True,True
+CLIENT_83F814F7,2026-02-17 14:42:43.816408,Self Referral,True,True,Employed,True,3,7,17,True,True
+CLIENT_D29D5370,2026-03-07 14:42:43.816409,Healthcare Provider,False,False,Employed,False,1,1,27,True,True
+CLIENT_093434A3,2026-01-25 14:42:43.816411,Community Agency,False,False,Employed,True,0,7,10,True,False
+CLIENT_FA2B7AF0,2026-01-20 14:42:43.816412,Healthcare Provider,False,True,Student,True,1,6,4,False,True
+CLIENT_D48FF4B2,2026-03-08 14:42:43.816413,Healthcare Provider,True,True,Unemployed,True,2,7,14,True,True
+CLIENT_802B906A,2026-02-09 14:42:43.816414,Family/Friend,False,True,Unemployed,True,1,6,27,True,True
+CLIENT_D86580A5,2026-04-04 14:42:43.816416,Family/Friend,False,False,Student,True,0,2,17,True,True
+CLIENT_0F4121D0,2026-03-12 14:42:43.816417,Family/Friend,False,False,Student,False,2,5,1,True,False
+CLIENT_16BADFC6,2026-06-10 14:42:43.816418,Social Services,False,True,Unemployed,True,2,0,21,True,False
+CLIENT_5966ABD0,2026-01-16 14:42:43.816419,Community Agency,False,False,Unemployed,False,1,6,10,False,False
+CLIENT_314F04B3,2025-12-31 14:42:43.816421,Family/Friend,False,True,Unemployed,True,2,6,25,False,True
+CLIENT_36790ECD,2026-01-17 14:42:43.816422,Self Referral,False,False,Unemployed,True,0,1,24,False,False
+CLIENT_67E9C3AC,2026-03-15 14:42:43.816423,Social Services,False,True,Unemployed,True,1,6,12,True,True
+CLIENT_9B871512,2026-01-17 14:42:43.816424,Court System,False,True,Employed,False,1,4,3,True,False
+CLIENT_56F4DA26,2026-01-16 14:42:43.816426,Self Referral,True,True,Student,True,3,5,21,True,False
+CLIENT_84A5092E,2026-03-09 14:42:43.816427,Self Referral,False,False,Employed,True,1,0,6,True,True
+CLIENT_0E652381,2026-04-22 14:42:43.816429,Family/Friend,False,False,Unemployed,False,0,0,28,True,False
+CLIENT_8F1F64DB,2026-01-03 14:42:43.816430,Court System,False,False,Unemployed,True,1,1,10,True,False
+CLIENT_DFE62E83,2025-12-27 14:42:43.816431,Court System,False,True,Unemployed,True,2,2,21,False,True
+CLIENT_9D693EEE,2026-02-05 14:42:43.816432,Social Services,False,False,Employed,True,1,0,23,True,True
+CLIENT_08490295,2026-05-05 14:42:43.816434,Court System,False,False,Employed,False,0,4,3,True,True
+CLIENT_A0EAEC5A,2026-03-23 14:42:43.816435,Community Agency,True,True,Unemployed,False,3,0,27,True,False
+CLIENT_138D9E80,2026-03-01 14:42:43.816436,Family/Friend,True,False,Employed,True,2,4,14,True,False
+CLIENT_835D5E83,2026-02-04 14:42:43.816437,Court System,False,False,Employed,True,1,5,0,True,False
+CLIENT_C0509A48,2026-06-02 14:42:43.816439,Social Services,True,True,Unemployed,False,1,5,22,True,False
+CLIENT_114BD151,2025-12-17 14:42:43.816440,Community Agency,False,False,Employed,False,2,3,2,True,False
+CLIENT_0A2D643B,2026-01-13 14:42:43.816441,Healthcare Provider,False,False,Student,True,2,3,13,True,True
+CLIENT_9A049B03,2026-01-05 14:42:43.816442,Healthcare Provider,True,False,Student,False,1,4,5,False,True
+CLIENT_F0BC318F,2026-05-02 14:42:43.816444,Community Agency,True,True,Student,True,2,2,17,False,False
+CLIENT_8AE4C23B,2026-03-06 14:42:43.816445,Social Services,True,True,Student,True,1,0,24,True,True
+CLIENT_79BF0868,2026-06-06 14:42:43.816446,Community Agency,False,False,Unemployed,False,0,6,0,True,True
+CLIENT_6AF1F692,2026-01-20 14:42:43.816447,Family/Friend,False,False,Unemployed,True,1,0,5,False,True
+CLIENT_749FC650,2026-03-15 14:42:43.816448,Family/Friend,True,False,Unemployed,False,0,3,5,False,False
+CLIENT_14063697,2026-02-21 14:42:43.816450,Healthcare Provider,False,False,Student,False,0,7,20,True,True
+CLIENT_72440A20,2026-04-14 14:42:43.816451,Court System,False,False,Student,False,0,6,15,True,True
+CLIENT_82C01CE1,2026-02-20 14:42:43.816452,Social Services,True,False,Employed,True,0,4,28,True,True
+CLIENT_011AF72A,2026-06-11 14:42:43.816453,Healthcare Provider,False,False,Employed,True,1,6,4,False,True
+CLIENT_37C20F19,2026-02-04 14:42:43.816454,Court System,False,True,Student,True,3,7,16,False,False
+CLIENT_396F8044,2026-04-26 14:42:43.816456,Court System,False,False,Student,False,2,0,9,True,True
+CLIENT_766CB53C,2026-01-24 14:42:43.816457,Family/Friend,True,False,Student,True,2,0,27,False,True
+CLIENT_9F484139,2026-05-07 14:42:43.816458,Self Referral,True,False,Student,True,2,2,20,True,False
+CLIENT_1E472B39,2026-01-04 14:42:43.816460,Self Referral,True,True,Employed,False,1,1,17,False,True
+CLIENT_C75D3F1F,2026-06-04 14:42:43.816461,Community Agency,False,True,Student,True,1,6,6,True,False
+CLIENT_D6E5A20B,2026-03-06 14:42:43.816462,Family/Friend,False,True,Employed,False,0,3,2,False,True
+CLIENT_E7866FDC,2026-01-17 14:42:43.816463,Court System,True,False,Student,True,0,7,12,True,False
+CLIENT_9512D95D,2026-04-26 14:42:43.816465,Social Services,True,False,Student,False,0,7,14,True,False
+CLIENT_9556B824,2026-02-02 14:42:43.816466,Self Referral,True,True,Student,True,1,7,19,True,True
+CLIENT_51E8EA28,2026-01-16 14:42:43.816467,Court System,True,False,Employed,True,0,3,18,False,False
+CLIENT_4C970004,2026-01-12 14:42:43.816468,Self Referral,False,False,Employed,True,5,1,2,False,False
+CLIENT_A30F4EF4,2026-04-20 14:42:43.816469,Self Referral,True,False,Unemployed,True,1,0,3,False,False
+CLIENT_7C252AB3,2026-02-13 14:42:43.816471,Self Referral,True,True,Student,False,0,2,4,False,False
+CLIENT_39BB88F4,2026-01-03 14:42:43.816472,Social Services,True,False,Unemployed,False,1,2,0,True,True
+CLIENT_E888A676,2026-01-12 14:42:43.816473,Family/Friend,False,False,Unemployed,False,0,3,3,True,True
+CLIENT_9E6A7255,2026-02-17 14:42:43.816474,Social Services,False,True,Employed,True,1,2,11,True,False
+CLIENT_4BE84111,2026-03-30 14:42:43.816476,Healthcare Provider,False,True,Employed,True,2,7,27,True,False
+CLIENT_BBA58959,2026-02-20 14:42:43.816477,Court System,True,False,Unemployed,True,0,5,26,True,True
+CLIENT_768B84EF,2025-12-31 14:42:43.816478,Family/Friend,False,False,Student,False,2,1,23,True,False
+CLIENT_EA5B2755,2025-12-29 14:42:43.816479,Family/Friend,False,True,Employed,False,1,0,9,True,False
+CLIENT_8ACC2398,2026-03-01 14:42:43.816481,Family/Friend,True,False,Student,True,1,5,22,True,True
+CLIENT_8B496BF9,2026-03-21 14:42:43.816482,Family/Friend,False,False,Student,True,2,1,24,True,False
+CLIENT_F747870A,2026-02-21 14:42:43.816483,Social Services,False,False,Unemployed,False,1,4,20,True,False
+CLIENT_D8D17907,2026-03-06 14:42:43.816484,Family/Friend,False,False,Unemployed,False,0,6,28,False,True
+CLIENT_3635A91E,2026-01-11 14:42:43.816486,Community Agency,False,False,Unemployed,False,0,3,25,True,False
+CLIENT_1C6C0BB2,2026-03-12 14:42:43.816487,Court System,False,False,Unemployed,False,0,7,19,False,False
+CLIENT_303C8BD5,2026-01-18 14:42:43.816488,Family/Friend,False,False,Employed,True,0,2,23,True,False
+CLIENT_71812781,2026-02-05 14:42:43.816489,Court System,False,False,Employed,True,2,4,24,True,False
+CLIENT_3A1DFB05,2026-02-23 14:42:43.816491,Community Agency,True,False,Unemployed,False,0,2,12,True,False
+CLIENT_C76B4057,2026-03-23 14:42:43.816492,Community Agency,False,False,Employed,False,0,5,22,True,False
+CLIENT_27D719C7,2026-04-20 14:42:43.816493,Court System,True,True,Unemployed,True,0,0,13,True,False
+CLIENT_EE62DE25,2026-01-01 14:42:43.816494,Self Referral,False,False,Student,False,1,0,22,True,True
+CLIENT_EFD96AED,2025-12-26 14:42:43.816496,Healthcare Provider,True,False,Student,False,0,0,4,True,True
+CLIENT_7F0A2211,2026-01-03 14:42:43.816497,Self Referral,True,False,Student,False,2,7,3,True,False
+CLIENT_71A1C003,2026-04-06 14:42:43.816498,Self Referral,True,False,Unemployed,False,2,2,13,True,True
+CLIENT_27E16152,2026-05-11 14:42:43.816499,Social Services,False,False,Student,True,1,4,9,True,True
+CLIENT_E0850A77,2026-01-22 14:42:43.816500,Self Referral,True,True,Employed,True,0,0,16,True,False
+CLIENT_1E68ED4E,2026-05-23 14:42:43.816502,Family/Friend,True,True,Student,True,0,4,9,True,False
+CLIENT_A0D177B4,2026-04-26 14:42:43.816503,Social Services,True,True,Student,False,0,2,25,False,False
+CLIENT_00328CE5,2026-01-16 14:42:43.816504,Social Services,False,True,Student,False,1,7,6,True,True
+CLIENT_D7CDAA5C,2026-02-05 14:42:43.816505,Community Agency,False,False,Employed,False,2,5,15,True,True
+CLIENT_23C657F2,2026-01-28 14:42:43.816507,Self Referral,False,False,Unemployed,True,0,7,0,False,False
+CLIENT_AF180E43,2026-01-29 14:42:43.816508,Community Agency,False,True,Employed,False,3,4,16,True,False
+CLIENT_09895DE0,2026-01-19 14:42:43.816509,Court System,False,False,Unemployed,False,1,7,20,True,False
+CLIENT_33512007,2026-02-05 14:42:43.816510,Healthcare Provider,False,True,Unemployed,False,0,7,28,True,True
+CLIENT_6DB6EB4A,2026-05-11 14:42:43.816512,Social Services,True,False,Student,False,2,5,8,True,False
+CLIENT_7CB676D5,2025-12-19 14:42:43.816513,Court System,True,False,Unemployed,False,2,2,5,True,True
+CLIENT_2CFC8CCB,2026-02-18 14:42:43.816514,Court System,True,True,Employed,True,0,2,18,False,False
+CLIENT_9CFD3C75,2026-02-14 14:42:43.816515,Family/Friend,False,False,Employed,True,1,3,12,True,False
+CLIENT_A0F8B2C4,2026-05-22 14:42:43.816517,Healthcare Provider,False,True,Unemployed,True,2,7,2,True,False
+CLIENT_4C15F47A,2026-01-06 14:42:43.816518,Court System,False,False,Student,True,2,2,6,True,True
+CLIENT_76EBDB6D,2026-05-06 14:42:43.816519,Court System,True,False,Student,False,2,2,21,True,False
+CLIENT_30883104,2026-02-24 14:42:43.816520,Healthcare Provider,False,True,Employed,False,1,1,8,True,False
+CLIENT_983BD614,2026-04-23 14:42:43.816522,Healthcare Provider,False,False,Student,True,1,0,21,True,False
+CLIENT_C3EA99F8,2026-06-05 14:42:43.816523,Court System,False,True,Unemployed,True,0,3,4,True,True
+CLIENT_F32828AC,2026-05-17 14:42:43.816524,Healthcare Provider,False,True,Unemployed,False,3,6,9,True,False
+CLIENT_8BD9C0D4,2026-05-17 14:42:43.816525,Court System,False,False,Employed,True,0,3,22,True,True
+CLIENT_D874E4E4,2026-05-23 14:42:43.816526,Court System,True,False,Unemployed,True,0,3,16,True,True
+CLIENT_090D3859,2026-05-14 14:42:43.816528,Family/Friend,False,False,Employed,True,1,6,11,False,True
+CLIENT_38B83CAE,2026-03-08 14:42:43.816529,Self Referral,False,False,Unemployed,True,0,1,22,True,False
+CLIENT_6D976934,2026-05-16 14:42:43.816530,Court System,False,False,Employed,True,0,7,15,True,False
+CLIENT_48A1706E,2026-02-22 14:42:43.816533,Community Agency,False,True,Student,True,2,5,2,True,True
+CLIENT_43C727EE,2026-04-13 14:42:43.816537,Social Services,False,False,Unemployed,True,1,2,29,True,True
+CLIENT_226F76B5,2026-04-26 14:42:43.816538,Self Referral,False,False,Unemployed,False,1,0,24,True,False
+CLIENT_20E9C64C,2026-01-17 14:42:43.816540,Self Referral,True,False,Employed,True,1,4,21,True,False
+CLIENT_865736A1,2026-06-09 14:42:43.816541,Self Referral,True,False,Employed,False,2,7,8,True,True
+CLIENT_8EFBBE9B,2026-05-09 14:42:43.816542,Family/Friend,True,False,Unemployed,True,2,6,28,False,False
+CLIENT_748064BE,2026-04-25 14:42:43.816543,Court System,False,False,Employed,True,1,5,14,True,True
+CLIENT_377ADEB4,2026-05-27 14:42:43.816545,Family/Friend,True,False,Unemployed,False,1,7,4,True,False
+CLIENT_7A20311C,2025-12-23 14:42:43.816546,Court System,False,False,Student,True,1,6,22,False,True
+CLIENT_8D1EDE4F,2026-01-06 14:42:43.816547,Family/Friend,False,False,Employed,True,3,2,12,False,False
+CLIENT_AAE02129,2026-04-28 14:42:43.816549,Family/Friend,False,False,Unemployed,False,1,1,13,False,True
+CLIENT_156091EE,2026-02-16 14:42:43.816550,Social Services,False,False,Student,False,1,7,19,True,True
+CLIENT_88820462,2026-06-07 14:42:43.816551,Community Agency,False,True,Student,True,0,6,14,True,False
+CLIENT_8D23CF6C,2026-03-06 14:42:43.816552,Family/Friend,False,True,Unemployed,True,2,2,15,True,True
+CLIENT_F10D91A7,2026-02-09 14:42:43.816554,Social Services,False,False,Employed,False,1,2,22,True,False
+CLIENT_3949AC15,2026-05-07 14:42:43.816555,Healthcare Provider,False,True,Unemployed,True,1,1,12,True,True
+CLIENT_1038E0B7,2026-05-20 14:42:43.816556,Community Agency,True,False,Student,False,0,3,16,True,True
+CLIENT_9E11C362,2026-03-12 14:42:43.816557,Family/Friend,True,True,Unemployed,False,3,7,22,False,True
+CLIENT_A4E987D1,2026-04-28 14:42:43.816558,Self Referral,False,False,Employed,False,0,7,7,True,True
+CLIENT_02CCA380,2026-03-10 14:42:43.816560,Healthcare Provider,False,False,Student,True,1,3,20,False,True
+CLIENT_2452984F,2026-03-06 14:42:43.816561,Healthcare Provider,True,False,Unemployed,False,4,0,1,True,False
+CLIENT_0791963C,2026-02-17 14:42:43.816562,Social Services,False,True,Employed,True,1,0,4,True,False
+CLIENT_5426D2CA,2026-01-04 14:42:43.816563,Healthcare Provider,False,False,Student,True,1,3,5,True,True
+CLIENT_0BBA869D,2026-01-03 14:42:43.816565,Community Agency,False,False,Employed,True,2,5,11,True,True
+CLIENT_7104741A,2026-04-07 14:42:43.816566,Family/Friend,False,True,Student,False,1,4,17,True,True
+CLIENT_556D7DC3,2026-02-05 14:42:43.816567,Family/Friend,False,False,Unemployed,True,1,2,29,True,True
+CLIENT_058D5D43,2026-05-26 14:42:43.816568,Self Referral,False,False,Employed,True,0,4,21,False,True
+CLIENT_7ACC684A,2026-05-19 14:42:43.816569,Social Services,False,False,Student,True,0,2,21,True,True
+CLIENT_EAA0689A,2026-04-20 14:42:43.816571,Self Referral,False,False,Employed,False,2,3,0,True,False
+CLIENT_8EDE6B26,2026-04-16 14:42:43.816572,Healthcare Provider,False,True,Employed,False,1,0,29,True,True
+CLIENT_5D8F6CCE,2026-04-07 14:42:43.816573,Self Referral,False,False,Unemployed,False,0,5,16,True,False
+CLIENT_FC95CE17,2026-03-01 14:42:43.816574,Community Agency,True,False,Employed,True,1,0,29,True,False
+CLIENT_9644294A,2025-12-21 14:42:43.816576,Family/Friend,False,True,Student,True,0,4,10,True,False
+CLIENT_524B2D27,2026-05-20 14:42:43.816577,Healthcare Provider,True,False,Student,False,1,0,9,True,False
+CLIENT_023849C3,2026-02-19 14:42:43.816578,Self Referral,True,False,Student,True,1,3,18,True,False
+CLIENT_3C15285C,2026-05-12 14:42:43.816579,Social Services,False,True,Student,True,2,5,13,True,False
+CLIENT_02E6295D,2025-12-20 14:42:43.816581,Community Agency,False,False,Unemployed,False,2,4,25,True,False
+CLIENT_DA70DFA4,2026-03-19 14:42:43.816582,Community Agency,False,False,Employed,False,2,5,9,True,False
+CLIENT_6AAC0CF8,2026-01-13 14:42:43.816583,Self Referral,True,False,Unemployed,False,0,7,14,True,False
+CLIENT_2289B221,2026-02-06 14:42:43.816584,Family/Friend,False,False,Employed,False,0,2,27,True,False
+CLIENT_06B2D828,2026-01-09 14:42:43.816585,Self Referral,False,True,Employed,False,3,0,18,True,True
+CLIENT_72BA187B,2026-02-03 14:42:43.816587,Healthcare Provider,False,False,Employed,True,1,5,3,True,False
+CLIENT_DEEEB5DF,2026-05-27 14:42:43.816588,Self Referral,False,False,Unemployed,False,3,1,1,False,True
+CLIENT_04A8708C,2026-03-01 14:42:43.816589,Community Agency,False,False,Employed,False,1,7,8,True,False
+CLIENT_9A72C24F,2026-01-03 14:42:43.816590,Self Referral,True,False,Unemployed,True,1,0,9,False,False
+CLIENT_459535FA,2026-01-27 14:42:43.816592,Family/Friend,False,False,Student,False,1,2,27,False,False
+CLIENT_09A1B036,2026-05-01 14:42:43.816593,Social Services,False,False,Student,False,3,5,10,True,False
+CLIENT_355D8C0E,2025-12-19 14:42:43.816594,Court System,True,False,Employed,False,0,4,13,True,False
+CLIENT_03A3D955,2026-05-05 14:42:43.816595,Self Referral,False,False,Unemployed,False,0,2,6,True,False
+CLIENT_2AB0CE76,2025-12-25 14:42:43.816597,Family/Friend,True,False,Student,False,3,1,22,True,True
+CLIENT_62A0EAE9,2026-05-18 14:42:43.816598,Family/Friend,False,False,Unemployed,False,3,5,14,True,True
+CLIENT_9197E484,2026-03-06 14:42:43.816599,Social Services,False,False,Unemployed,True,2,6,21,True,False
+CLIENT_838F461C,2026-04-24 14:42:43.816600,Community Agency,False,True,Employed,False,3,6,18,True,False
+CLIENT_73DAA928,2026-01-11 14:42:43.816601,Family/Friend,True,True,Student,True,0,3,21,False,True
+CLIENT_3963317A,2026-01-12 14:42:43.816603,Family/Friend,False,False,Employed,True,0,0,14,True,True
+CLIENT_A43231C2,2026-05-31 14:42:43.816604,Family/Friend,False,False,Employed,True,1,4,29,True,True
+CLIENT_B3DFDC6E,2026-04-14 14:42:43.816605,Family/Friend,True,False,Student,True,1,3,27,True,False
+CLIENT_4E47EB55,2026-01-29 14:42:43.816606,Healthcare Provider,False,False,Student,True,5,5,23,True,True
+CLIENT_600B4CDF,2026-04-17 14:42:43.816608,Healthcare Provider,False,False,Unemployed,False,0,6,7,True,False
+CLIENT_0788979F,2026-05-08 14:42:43.816609,Community Agency,False,False,Student,False,1,6,10,False,False
+CLIENT_8E6AEE9E,2025-12-22 14:42:43.816610,Self Referral,True,False,Unemployed,False,3,6,28,True,True
+CLIENT_5F193B35,2026-05-24 14:42:43.816611,Family/Friend,False,False,Unemployed,True,0,5,8,True,True
+CLIENT_F1607C19,2026-04-09 14:42:43.816612,Social Services,False,False,Unemployed,False,2,6,14,True,False
+CLIENT_9B15FED6,2026-06-05 14:42:43.816614,Self Referral,False,False,Student,False,1,2,0,False,True
+CLIENT_62F77E7D,2026-01-20 14:42:43.816615,Social Services,False,False,Employed,False,1,7,29,True,True
+CLIENT_E52D0874,2026-01-22 14:42:43.816616,Self Referral,False,True,Unemployed,True,2,5,0,True,False
+CLIENT_01299AC6,2026-02-18 14:42:43.816617,Community Agency,True,True,Employed,True,0,4,18,True,True
+CLIENT_DE5872C6,2026-01-21 14:42:43.816619,Family/Friend,False,True,Employed,True,2,7,2,True,False
+CLIENT_12E2C8DF,2026-03-13 14:42:43.816620,Family/Friend,False,False,Student,True,0,3,9,True,True
+CLIENT_2C4CF657,2026-03-07 14:42:43.816621,Court System,True,False,Employed,True,0,4,7,True,True
+CLIENT_21EF7793,2026-04-08 14:42:43.816622,Social Services,False,False,Employed,False,0,7,14,True,True
+CLIENT_64C212DF,2026-05-12 14:42:43.816623,Self Referral,False,False,Student,True,2,1,9,True,False
+CLIENT_2AF4DD48,2026-03-19 14:42:43.816625,Self Referral,False,True,Unemployed,True,1,6,0,False,True
+CLIENT_392A52E4,2026-04-23 14:42:43.816626,Healthcare Provider,False,False,Employed,True,2,1,28,True,False
+CLIENT_F65CCFBF,2026-01-11 14:42:43.816627,Court System,False,True,Student,True,2,0,17,True,False
+CLIENT_48B361D4,2026-04-11 14:42:43.816628,Healthcare Provider,False,False,Employed,True,0,0,1,True,True
+CLIENT_37B73510,2026-02-08 14:42:43.816630,Healthcare Provider,False,True,Employed,True,1,7,18,True,True
+CLIENT_131B0C35,2026-01-14 14:42:43.816631,Healthcare Provider,True,False,Unemployed,True,4,1,12,False,True
+CLIENT_15A26C6F,2026-04-16 14:42:43.816632,Social Services,False,True,Employed,False,1,5,21,True,True
+CLIENT_25DAC95B,2026-04-16 14:42:43.816633,Social Services,False,False,Student,False,2,4,0,True,True
+CLIENT_AB5E292D,2026-03-19 14:42:43.816635,Community Agency,False,False,Employed,True,1,1,1,True,True
+CLIENT_B9888088,2026-04-25 14:42:43.816636,Community Agency,True,False,Unemployed,True,2,0,28,True,False
+CLIENT_48A1A756,2025-12-25 14:42:43.816637,Healthcare Provider,True,False,Unemployed,False,0,1,15,True,True
+CLIENT_A934C244,2026-04-04 14:42:43.816638,Court System,True,False,Student,True,1,5,14,True,True
+CLIENT_6EA2FDB3,2026-05-29 14:42:43.816639,Self Referral,True,False,Unemployed,True,0,1,12,True,False
+CLIENT_99A0B871,2026-04-20 14:42:43.816643,Social Services,False,False,Employed,False,1,4,15,False,True
+CLIENT_04D19FDE,2026-03-04 14:42:43.816644,Court System,True,False,Unemployed,True,3,3,16,True,False
+CLIENT_A3AF7B38,2026-06-05 14:42:43.816645,Family/Friend,False,False,Student,False,1,5,20,True,False
+CLIENT_3C1B7053,2026-04-21 14:42:43.816647,Social Services,False,False,Unemployed,False,0,0,28,False,True
+CLIENT_1D2028DD,2026-04-14 14:42:43.816648,Social Services,False,True,Unemployed,True,0,4,28,True,True
+CLIENT_188C1FDC,2026-02-25 14:42:43.816649,Community Agency,False,False,Unemployed,True,0,1,6,True,False
+CLIENT_0F785409,2026-06-08 14:42:43.816650,Self Referral,False,False,Student,False,1,1,23,True,False
