@@ -4,13 +4,17 @@ Intake Attrition Risk Dashboard - Main Streamlit Application
 
 import streamlit as st
 import pandas as pd
-import os
-from pathlib import Path
 
 # Import custom modules
-from src.risk_scoring import RiskScorer, get_main_risk_factors
-from src.data_cleaning import validate_client_data, calculate_attrition_rate, calculate_admission_rate
-from src.data_generator import generate_simulated_data, save_to_csv
+from src.risk_scoring import get_main_risk_factors
+from src.data_cleaning import calculate_attrition_rate, calculate_admission_rate
+from src.data_generator import generate_intervention_id
+from src.database import (
+    load_or_initialize_data,
+    append_intervention_to_db,
+    get_data_paths,
+)
+from src.auth import authenticate_user, ROLE_PAGE_ACCESS, ROLE_DESCRIPTIONS
 from src import charts
 
 
@@ -33,57 +37,76 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-@st.cache_data
-def load_or_generate_data():
-    """Load data from CSV or generate if doesn't exist."""
-    data_dir = Path(__file__).parent / 'data'
-    csv_path = data_dir / 'simulated_intake_data.csv'
-    
-    if csv_path.exists():
-        df = pd.read_csv(csv_path)
-    else:
-        # Generate new data
-        df = generate_simulated_data(n_records=400)
-        save_to_csv(df, str(csv_path))
-    
-    # Validate data
-    df, warnings = validate_client_data(df)
-    
-    # Calculate risk scores
-    df = RiskScorer.calculate_all_scores(df)
-    
-    return df
+def load_data():
+    """Load intake data from the SQLite database or initialize it."""
+    return load_or_initialize_data()
 
 
 def main():
     """Main application flow."""
     
+    # Authentication
+    st.sidebar.title("🔐 User Login")
+    role = st.sidebar.selectbox(
+        "Select your role",
+        options=list(ROLE_PAGE_ACCESS.keys()),
+        index=0,
+    )
+    password = st.sidebar.text_input("Password", type="password")
+    login_button = st.sidebar.button("Login")
+
+    if 'logged_in' not in st.session_state:
+        st.session_state.logged_in = False
+        st.session_state.active_role = None
+
+    if login_button:
+        valid = authenticate_user(role, password)
+        if valid:
+            st.session_state.logged_in = True
+            st.session_state.active_role = role
+            st.sidebar.success(f"Logged in as {role}")
+        else:
+            st.sidebar.error("Invalid role or password")
+
+    if not st.session_state.logged_in:
+        st.sidebar.warning("Please log in to access the dashboard")
+        return
+
+    active_role = st.session_state.active_role
+    st.sidebar.markdown(f"**Role:** {active_role}")
+    st.sidebar.markdown(ROLE_DESCRIPTIONS.get(active_role, ""))
+
     # Load data
-    df = load_or_generate_data()
-    
+    data = load_data()
+    clients_df = data['clients']
+    appointments_df = data['appointments']
+    communications_df = data['communications']
+    interventions_df = data['interventions']
+
     # Sidebar navigation
     st.sidebar.title("📊 Navigation")
+    allowed_pages = ROLE_PAGE_ACCESS.get(active_role, ["Home / Overview"])
     page = st.sidebar.radio(
         "Select Page",
-        ["Home / Overview", "Risk Dashboard", "Client Profile", "Analytics"]
+        allowed_pages,
     )
     
     st.sidebar.markdown("---")
     st.sidebar.markdown("**Data Stats**")
-    st.sidebar.metric("Total Clients", len(df))
-    st.sidebar.metric("Admission Rate", f"{calculate_admission_rate(df)*100:.1f}%")
-    st.sidebar.metric("Attrition Rate", f"{calculate_attrition_rate(df)*100:.1f}%")
-    st.sidebar.metric("High-Risk Clients", len(df[df['risk_category'] == 'High Risk']))
+    st.sidebar.metric("Total Clients", len(clients_df))
+    st.sidebar.metric("Admission Rate", f"{calculate_admission_rate(clients_df)*100:.1f}%")
+    st.sidebar.metric("Attrition Rate", f"{calculate_attrition_rate(clients_df)*100:.1f}%")
+    st.sidebar.metric("High-Risk Clients", len(clients_df[clients_df['risk_category'] == 'High Risk']))
     
     # Page routing
     if page == "Home / Overview":
-        show_home(df)
+        show_home(clients_df)
     elif page == "Risk Dashboard":
-        show_risk_dashboard(df)
+        show_risk_dashboard(clients_df)
     elif page == "Client Profile":
-        show_client_profile(df)
+        show_client_profile(clients_df, appointments_df, communications_df, interventions_df, active_role)
     elif page == "Analytics":
-        show_analytics(df)
+        show_analytics(clients_df)
 
 
 def show_home(df: pd.DataFrame):
@@ -200,8 +223,14 @@ def show_risk_dashboard(df: pd.DataFrame):
     st.plotly_chart(charts.create_top_barriers(filtered_df), use_container_width=True)
 
 
-def show_client_profile(df: pd.DataFrame):
-    """Client Profile page."""
+def show_client_profile(
+    df: pd.DataFrame,
+    appointments_df: pd.DataFrame,
+    communications_df: pd.DataFrame,
+    interventions_df: pd.DataFrame,
+    active_role: str,
+):
+    """Client Profile page with history and intervention notes."""
     st.title("👤 Client Profile")
     
     # Select client
@@ -245,7 +274,7 @@ def show_client_profile(df: pd.DataFrame):
         st.write(f"• Family Support: {'Yes' if client['family_support'] else 'No'}")
     
     with col2:
-        st.subheader("Contact & Appointment History")
+        st.subheader("Contact & Appointment Summary")
         st.write(f"• Contact Attempts: {int(client['contact_attempts'])}")
         st.write(f"• Missed Appointments: {int(client['missed_appointments'])}")
         st.write(f"• Wait Days: {int(client['wait_days'])}")
@@ -254,15 +283,80 @@ def show_client_profile(df: pd.DataFrame):
     
     st.markdown("---")
     
-    st.subheader("Recommended Follow-up Action")
-    risk_score = client['risk_score']
+    client_appointments = appointments_df[appointments_df['client_id'] == client_id].sort_values('appointment_date')
+    client_communications = communications_df[communications_df['client_id'] == client_id].sort_values('attempt_date')
+    client_interventions = interventions_df[interventions_df['client_id'] == client_id].sort_values('created_at', ascending=False)
     
-    if risk_score >= 61:
-        st.warning("🔴 **HIGH PRIORITY** - Schedule immediate outreach within 2 days. Consider barrier-specific interventions.")
-    elif risk_score >= 31:
-        st.info("🟡 **MEDIUM PRIORITY** - Schedule follow-up within 1 week. Address identified barriers.")
+    st.subheader("Appointment History")
+    st.dataframe(
+        client_appointments[['appointment_date', 'appointment_type', 'status', 'location', 'notes']].assign(
+            appointment_date=client_appointments['appointment_date'].dt.strftime('%Y-%m-%d')
+        ),
+        use_container_width=True,
+        height=260,
+    )
+    
+    st.subheader("Communication Attempts")
+    st.dataframe(
+        client_communications[['attempt_date', 'method', 'result', 'notes']].assign(
+            attempt_date=client_communications['attempt_date'].dt.strftime('%Y-%m-%d')
+        ),
+        use_container_width=True,
+        height=260,
+    )
+    
+    st.markdown("---")
+    
+    st.subheader("Intervention Notes")
+    if not client_interventions.empty:
+        st.dataframe(
+            client_interventions[['created_at', 'created_by', 'recommendation', 'follow_up_by', 'note']].assign(
+                created_at=client_interventions['created_at'].dt.strftime('%Y-%m-%d')
+            ),
+            use_container_width=True,
+            height=260,
+        )
     else:
-        st.success("🟢 **LOW PRIORITY** - Routine follow-up. Monitor for changes in status.")
+        st.info("No intervention notes yet for this client.")
+    
+    if active_role in ['Intake Coordinator', 'Counselor / Social Worker']:
+        st.markdown("---")
+        st.subheader("Add a New Intervention Note")
+        with st.form(key='intervention_form'):
+            recommendation = st.selectbox(
+                'Recommendation',
+                options=[
+                    'Schedule barrier support session',
+                    'Arrange transportation assistance',
+                    'Connect with housing support',
+                    'Increase outreach frequency',
+                    'Offer peer mentor support',
+                ]
+            )
+            follow_up_by = st.selectbox(
+                'Follow-up assigned to',
+                options=['Next Intake Coordinator', 'Case Manager', 'Counselor', 'Peer Support']
+            )
+            note_text = st.text_area('Note', placeholder='Describe the follow-up action or barrier support needed')
+            submit_note = st.form_submit_button('Save Intervention Note')
+
+        if submit_note:
+            if note_text.strip() == '':
+                st.error('Please add a note before saving.')
+            else:
+                _, _, db_path = get_data_paths()
+                intervention_data = {
+                    'intervention_id': generate_intervention_id(client_id, len(client_interventions) + 1),
+                    'client_id': client_id,
+                    'created_at': pd.Timestamp.now(),
+                    'created_by': active_role,
+                    'recommendation': recommendation,
+                    'follow_up_by': follow_up_by,
+                    'note': note_text,
+                }
+                append_intervention_to_db(intervention_data, db_path)
+                st.success('Intervention note saved.')
+                st.experimental_rerun()
 
 
 def show_analytics(df: pd.DataFrame):
