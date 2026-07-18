@@ -6,7 +6,12 @@ import streamlit as st
 import pandas as pd
 
 # Import custom modules
-from src.risk_scoring import get_main_risk_factors
+from src.risk_scoring import (
+    get_main_risk_factors,
+    get_risk_factor_details,
+    get_recommended_actions,
+    RiskScorer,
+)
 from src.data_cleaning import calculate_attrition_rate, calculate_admission_rate
 from src.data_generator import generate_intervention_id
 from src.database import (
@@ -29,10 +34,14 @@ st.set_page_config(
 # Styling
 st.markdown("""
     <style>
-    .metric-card { padding: 20px; border-radius: 10px; background-color: #f0f2f6; }
+    .metric-card { padding: 20px; border-radius: 12px; background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%); border: 1px solid #dce7ff; }
     .high-risk { color: #d32f2f; font-weight: bold; }
     .medium-risk { color: #f57c00; font-weight: bold; }
     .low-risk { color: #388e3c; font-weight: bold; }
+    .risk-badge { display: inline-block; padding: 6px 10px; border-radius: 999px; font-weight: 700; }
+    .risk-high { background: #fde8e8; color: #b42318; }
+    .risk-medium { background: #fef3c7; color: #b45309; }
+    .risk-low { background: #dcfce7; color: #166534; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -111,115 +120,102 @@ def main():
 
 def show_home(df: pd.DataFrame):
     """Home / Overview page."""
-    st.title("📊 Intake Attrition Risk Dashboard")
-    st.markdown("Analyze client risk levels, appointment history, and intervention priorities.")
-    
+    st.title("📊 Intake Attrition Decision Support Dashboard")
+    st.markdown("This dashboard helps intake teams identify clients at elevated risk of disengaging before treatment admission so they can intervene earlier.")
+    st.caption("This is a rule-based clinical decision support tool intended to support professional judgment, not replace it.")
+
     col1, col2, col3, col4 = st.columns(4)
-    
+
     with col1:
         st.metric("Total Clients", len(df))
-    
+
     with col2:
         admission_rate = calculate_admission_rate(df)
         st.metric("Admission Rate", f"{admission_rate*100:.1f}%")
-    
+
     with col3:
         attrition_rate = calculate_attrition_rate(df)
         st.metric("Attrition Rate", f"{attrition_rate*100:.1f}%")
-    
+
     with col4:
         high_risk_count = len(df[df['risk_category'] == 'High Risk'])
         st.metric("High-Risk Clients", high_risk_count)
-    
+
     st.markdown("---")
-    
+
     st.subheader("Quick Overview")
-    
+
     col1, col2 = st.columns(2)
-    
+
     with col1:
-        risk_dist = df['risk_category'].value_counts()
+        risk_dist = df['risk_category'].value_counts().reindex(['Low Risk', 'Medium Risk', 'High Risk']).fillna(0)
         st.write("**Clients by Risk Level**")
         st.bar_chart(risk_dist)
-    
+
     with col2:
         source_dist = df['referral_source'].value_counts().head(10)
         st.write("**Clients by Referral Source**")
         st.bar_chart(source_dist)
-    
+
     st.markdown("---")
-    st.info("👉 Use the **Risk Dashboard** to filter clients and view detailed charts. Use **Client Profile** to see individual client details.")
+    st.info("👉 Use the **Risk Dashboard** to review client disengagement risk and explore barriers. Use **Client Profile** to review a specific client and recommended actions.")
 
 
 def show_risk_dashboard(df: pd.DataFrame):
     """Risk Dashboard page with filters."""
-    st.title("🎯 Risk Dashboard")
-    
+    st.title("🎯 Risk of Client Disengagement Before Treatment Admission")
+    st.markdown("This score estimates the likelihood that a client may disengage before entering treatment based on intake information and documented barriers. It is intended to support—not replace—professional judgment.")
+
     col1, col2, col3 = st.columns(3)
-    
+
     with col1:
         risk_filter = st.multiselect(
             "Filter by Risk Level",
             options=['Low Risk', 'Medium Risk', 'High Risk'],
-            default=['Low Risk', 'Medium Risk', 'High Risk']
+            default=['Low Risk', 'Medium Risk', 'High Risk'],
         )
-    
+
     with col2:
         referral_filter = st.multiselect(
             "Filter by Referral Source",
             options=df['referral_source'].unique(),
-            default=df['referral_source'].unique()
+            default=df['referral_source'].unique(),
         )
-    
+
     with col3:
         barrier_filter = st.radio(
             "Filter by Transportation Barrier",
             options=['All', 'Has Barrier', 'No Barrier'],
-            horizontal=True
+            horizontal=True,
         )
-    
-    # Apply filters
-    filtered_df = df[
-        (df['risk_category'].isin(risk_filter)) &
-        (df['referral_source'].isin(referral_filter))
-    ]
-    
+
+    filtered_df = df[(df['risk_category'].isin(risk_filter)) & (df['referral_source'].isin(referral_filter))]
+
     if barrier_filter == 'Has Barrier':
         filtered_df = filtered_df[filtered_df['transportation_barrier'] == True]
     elif barrier_filter == 'No Barrier':
         filtered_df = filtered_df[filtered_df['transportation_barrier'] == False]
-    
+
     st.markdown(f"**Showing {len(filtered_df)} of {len(df)} clients**")
     st.markdown("---")
-    
-    # Client Risk Table
+
     st.subheader("Client Risk Table")
-    
-    display_cols = [
-        'client_id', 'intake_date', 'risk_score', 'risk_category',
-        'missed_appointments', 'contact_attempts', 'wait_days'
-    ]
-    
+    display_cols = ['client_id', 'intake_date', 'risk_score', 'risk_category', 'missed_appointments', 'contact_attempts', 'wait_days']
     df_display = filtered_df[display_cols].copy()
     df_display['intake_date'] = pd.to_datetime(df_display['intake_date']).dt.strftime('%Y-%m-%d')
-    
     st.dataframe(df_display, use_container_width=True, height=400)
-    
+
     st.markdown("---")
-    
-    # Charts
     st.subheader("Risk Analysis Charts")
-    
+
     col1, col2 = st.columns(2)
-    
     with col1:
         st.plotly_chart(charts.create_attrition_by_referral_source(filtered_df), use_container_width=True)
         st.plotly_chart(charts.create_missed_appointments_by_risk(filtered_df), use_container_width=True)
-    
     with col2:
         st.plotly_chart(charts.create_attrition_by_barrier(filtered_df), use_container_width=True)
         st.plotly_chart(charts.create_wait_time_by_outcome(filtered_df), use_container_width=True)
-    
+
     st.plotly_chart(charts.create_top_barriers(filtered_df), use_container_width=True)
 
 
@@ -232,61 +228,70 @@ def show_client_profile(
 ):
     """Client Profile page with history and intervention notes."""
     st.title("👤 Client Profile")
-    
-    # Select client
+
     client_id = st.selectbox(
         "Select a Client",
         options=df['client_id'].unique(),
-        help="Choose a client to view details"
+        help="Choose a client to review the disengagement risk profile",
     )
-    
+
     client = df[df['client_id'] == client_id].iloc[0]
-    
+    risk_score = int(client['risk_score'])
+    risk_category = client['risk_category']
+    color = '#d32f2f' if risk_category == 'High Risk' else '#f57c00' if risk_category == 'Medium Risk' else '#388e3c'
+
     st.markdown("---")
-    
     col1, col2, col3, col4 = st.columns(4)
-    
+
     with col1:
-        st.metric("Risk Score", int(client['risk_score']))
+        st.metric("Risk Score", risk_score)
     with col2:
-        risk_category = client['risk_category']
-        color = '#d32f2f' if risk_category == 'High Risk' else '#f57c00' if risk_category == 'Medium Risk' else '#388e3c'
-        st.markdown(f"<div style='color: {color}; font-weight: bold; font-size: 20px;'>{risk_category}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='risk-badge risk-{RiskScorer.get_risk_level(risk_score).lower()}'>{risk_category}</div>", unsafe_allow_html=True)
     with col3:
         st.metric("Intake Date", pd.to_datetime(client['intake_date']).strftime('%Y-%m-%d'))
     with col4:
-        status = "Admitted" if client['admitted'] else "Did Not Admit"
-        st.metric("Status", status)
-    
+        status = 'Admitted' if client['admitted'] else 'Did Not Admit'
+        st.metric("Admission Status", status)
+
     st.markdown("---")
-    
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.subheader("Main Risk Factors")
-        factors = get_main_risk_factors(client.to_dict())
-        for factor in factors:
-            st.write(f"• {factor}")
-        
-        st.subheader("Barriers Present")
-        st.write(f"• Transportation: {'Yes' if client['transportation_barrier'] else 'No'}")
-        st.write(f"• Housing Instability: {'Yes' if client['housing_instability'] else 'No'}")
-        st.write(f"• Family Support: {'Yes' if client['family_support'] else 'No'}")
-    
-    with col2:
-        st.subheader("Contact & Appointment Summary")
-        st.write(f"• Contact Attempts: {int(client['contact_attempts'])}")
-        st.write(f"• Missed Appointments: {int(client['missed_appointments'])}")
-        st.write(f"• Wait Days: {int(client['wait_days'])}")
-        st.write(f"• Referral Source: {client['referral_source']}")
-        st.write(f"• Employment: {client['employment_status']}")
-    
+
+    st.subheader("Client Summary")
+    summary_col1, summary_col2 = st.columns(2)
+    with summary_col1:
+        st.write(f"**Referral Source:** {client['referral_source']}")
+        st.write(f"**Wait Days:** {int(client['wait_days'])}")
+        st.write(f"**Current Intake Stage:** {'Completed' if client['intake_completed'] else 'Pending'}")
+        st.write(f"**Employment:** {client['employment_status']}")
+    with summary_col2:
+        st.write(f"**Contact Attempts:** {int(client['contact_attempts'])}")
+        st.write(f"**Missed Appointments:** {int(client['missed_appointments'])}")
+        st.write(f"**Transportation Barrier:** {'Yes' if client['transportation_barrier'] else 'No'}")
+        st.write(f"**Housing Instability:** {'Yes' if client['housing_instability'] else 'No'}")
+
     st.markdown("---")
-    
+
+    st.subheader("Why This Client Was Flagged")
+    factor_details = get_risk_factor_details(client.to_dict())
+    for item in factor_details:
+        st.write(f"- **{item['factor']}** ({item['impact']}): {item['detail']}")
+
+    st.markdown("---")
+    st.subheader("Recommended Actions")
+    recommendations = get_recommended_actions(client.to_dict())
+    for action in recommendations:
+        st.write(f"**{action['title']}**")
+        for item in action['items']:
+            st.write(f"• {item}")
+        st.write("")
+
+    st.markdown("---")
+    st.subheader("Notes")
+    st.info("Use this section to document contact attempts, interventions completed, and follow-up actions.")
+
     client_appointments = appointments_df[appointments_df['client_id'] == client_id].sort_values('appointment_date')
     client_communications = communications_df[communications_df['client_id'] == client_id].sort_values('attempt_date')
     client_interventions = interventions_df[interventions_df['client_id'] == client_id].sort_values('created_at', ascending=False)
-    
+
     st.subheader("Appointment History")
     st.dataframe(
         client_appointments[['appointment_date', 'appointment_type', 'status', 'location', 'notes']].assign(
@@ -295,7 +300,7 @@ def show_client_profile(
         use_container_width=True,
         height=260,
     )
-    
+
     st.subheader("Communication Attempts")
     st.dataframe(
         client_communications[['attempt_date', 'method', 'result', 'notes']].assign(
@@ -304,9 +309,8 @@ def show_client_profile(
         use_container_width=True,
         height=260,
     )
-    
+
     st.markdown("---")
-    
     st.subheader("Intervention Notes")
     if not client_interventions.empty:
         st.dataframe(
@@ -318,7 +322,7 @@ def show_client_profile(
         )
     else:
         st.info("No intervention notes yet for this client.")
-    
+
     if active_role in ['Intake Coordinator', 'Counselor / Social Worker']:
         st.markdown("---")
         st.subheader("Add a New Intervention Note")
@@ -331,11 +335,11 @@ def show_client_profile(
                     'Connect with housing support',
                     'Increase outreach frequency',
                     'Offer peer mentor support',
-                ]
+                ],
             )
             follow_up_by = st.selectbox(
                 'Follow-up assigned to',
-                options=['Next Intake Coordinator', 'Case Manager', 'Counselor', 'Peer Support']
+                options=['Next Intake Coordinator', 'Case Manager', 'Counselor', 'Peer Support'],
             )
             note_text = st.text_area('Note', placeholder='Describe the follow-up action or barrier support needed')
             submit_note = st.form_submit_button('Save Intervention Note')
@@ -356,42 +360,52 @@ def show_client_profile(
                 }
                 append_intervention_to_db(intervention_data, db_path)
                 st.success('Intervention note saved.')
-                st.experimental_rerun()
+                st.rerun()
 
 
 def show_analytics(df: pd.DataFrame):
-    """Analytics page."""
+    """Analytics page for managers."""
     st.title("📈 Analytics & Trends")
-    
-    st.subheader("Risk Score Distribution")
-    st.plotly_chart(charts.create_risk_distribution(df), use_container_width=True)
-    
+    st.markdown("Monitor intake funnel performance, risk distribution, recurring barriers, and referral source outcomes.")
+
+    st.subheader("Intake Funnel")
+    st.plotly_chart(charts.create_intake_funnel(df), use_container_width=True)
+
     st.markdown("---")
-    
+    st.subheader("Risk Distribution")
+    st.plotly_chart(charts.create_risk_distribution(df), use_container_width=True)
+
+    st.markdown("---")
     col1, col2 = st.columns(2)
-    
     with col1:
         st.subheader("High-Risk Clients Over Time")
         st.plotly_chart(charts.create_high_risk_by_week(df), use_container_width=True)
-    
     with col2:
-        st.subheader("Top Disengagement Factors")
+        st.subheader("Top Barriers")
         st.plotly_chart(charts.create_top_barriers(df), use_container_width=True)
-    
+
     st.markdown("---")
-    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader("Average Wait Time by Referral Source")
+        st.plotly_chart(charts.create_average_wait_time_by_referral(df), use_container_width=True)
+    with col2:
+        st.subheader("Referral Source Analysis")
+        st.plotly_chart(charts.create_referral_source_analysis(df), use_container_width=True)
+
+    st.markdown("---")
+    st.subheader("Transportation Trends")
+    st.plotly_chart(charts.create_transportation_trends(df), use_container_width=True)
+
+    st.markdown("---")
     st.subheader("Summary Statistics")
-    
     col1, col2, col3 = st.columns(3)
-    
     with col1:
         avg_score = df['risk_score'].mean()
         st.metric("Average Risk Score", f"{avg_score:.1f}")
-    
     with col2:
         high_risk_pct = (len(df[df['risk_category'] == 'High Risk']) / len(df)) * 100
         st.metric("% High-Risk Clients", f"{high_risk_pct:.1f}%")
-    
     with col3:
         avg_contacts = df['contact_attempts'].mean()
         st.metric("Average Contact Attempts", f"{avg_contacts:.1f}")
